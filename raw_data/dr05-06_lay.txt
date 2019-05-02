@@ -1,0 +1,79 @@
+NCES Common Core of Data Local Education Agency-Level Public-Use Data File on Public School Dropouts: School Year 2005-06
+
+FILE NAME = dr05p1b.dat, 2005-06 
+
+NVAR = 24
+
+NOBS = 18,213
+
+LRECL = 237
+
+
+The file contains data for the school year 2005-06 sorted by the local education agency identification number (LEAID). 
+
+Variable	Start		End		Field	Data	 
+name		position	position	length	type	Description
+					
+LEAID 		1		7		7	AN	NCES local education agency identification number. The first two positions of this field are also the FIPS state code.
+FIPST		1		2		2	AN	Federal Information Processing Standards (FIPS) state code.
+YEAR 		8		11		4	AN	School year.
+STID 		12		25		14	AN	State’s own identification code for the local education agency.
+NAME 		26		85		60	AN	Name of the education agency.
+								NOTE: Throughout the remainder of this file, the following codes may appear as representing missing values whenever they are present in the data or the documentation.
+								M: when alphanumeric data are missing; that is, a value was expected, but none was measured.
+								-1: when numeric data are missing; that is, a value was expected, but none was measured.
+								N: when alphanumeric data items are not applicable; that is, a value was neither expected nor measured.
+								-2: when numeric data items are not applicable; that is, a value was neither expected nor measured.
+PHONE 		86		95		10	AN	Telephone number of education agency. NOTE: Position #0086-0088 is the area code, and position #0089-0095 is the exchange and number.
+MSTREE 		96		125		30	AN	Mailing address of the agency-may be a street address, a P.O. Box number, or, if there is no address beyond CITY, STATE, and ZIP, the character 'N.'
+MCITY 		126		155		30	AN	Name of the mailing address city.
+MSTATE 		156		157		2	AN	Two-letter U.S. Postal Service abbreviation for the state where the mailing address is located.
+MZIP 		158		162		5	AN	Five-digit U.S. Postal Service ZIP code for the mailing address.
+MZIP4 		163		166		4	AN	Four-digit ZIP+4, if assigned; if none, field is blank.
+LOCALE 		167		167		1	AN	NCES code for location of the agency relative to populous areas derived from the locale codes of the agency’s schools:
+								1 = Large city: A principal city of a metropolitan core-based statistical area (CBSA), with the city having a population greater than or equal to 250,000.
+								2 = Midsize city: A principal city of a metropolitan CBSA, with the city having a population less than 250,000.
+								3 = Urban fringe of a large city: Any incorporated place, Census-designated place, or nonplace territory within a metropolitan CBSA of a large city and defined as urban by the Census Bureau.
+								4 = Urban fringe of a midsize city: Any incorporated place, Census-designated place, or nonplace territory within a CBSA of a midsize city and defined as urban by the Census Bureau.
+								5 = Large town: An incorporated place or Census-designated place with a population greater than or equal to 25,000 and located outside a metropolitan CBSA or inside a micropolitan CBSA.
+								6 = Small town: An incorporated place or Census-designated place with a population less than 25,000 and greater than or equal to 2,500 and located outside a metropolitan CBSA or inside a micropolitan CBSA.
+								7 = Rural, outside CBSA: Any incorporated place, Census-designated place, or non-place territory not within a metropolitan CBSA or within a micropolitan CBSA and defined as rural by the Census Bureau.
+								8 = Rural, inside CBSA: Any incorporated place, Census-designated place, or nonplace territory within a metropolitan CBSA and defined as rural by the Census Bureau.
+BOUND 		168		168		1	AN	The boundary change indicator is a classification of changes in a local education agency’s boundaries since the last report to NCES. The options are as follows:
+								1 = No significant boundary change for this agency since the last report. Currently in operation.
+								2 = Agency has closed with no effect on another agency’s boundaries.
+								3 = This is a new agency formed with no effect on another agency’s boundaries.
+								4 = Agency was in existence, but was not reported in the previous year’s CCD agency universe survey and is now being added.
+								5 = Agency has undergone a significant change in geographic boundaries or instructional responsibility.
+								6 = Agency is temporarily closed and may reopen within 3 years.
+								7 = Agency is scheduled to be operational within 2 years.
+TYPE		169		169		1	AN	NCES code for type of agency:
+								1 = Local school district that is not a component of a supervisory union
+								2 = Local school district component of a supervisory union sharing a superintendent and administrative services with other local school districts.
+                                                                3 = Supervisory union administrative center, or a county superintendent serving the same purpose.
+                                                                4 = Regional education services agency, or a county superintendent serving the same purpose.
+                                                                5 = State-operated institution charged, at least in part, with providing elementary and/or secondary instruction or services to a special-needs population.
+                                                                6 = Federally operated institution charged, at least in part, with providing elementary and/or secondary instruction or services to a special-needs population.
+                                                                7 = Other education agencies that do not fit into the first six categories. 
+GSLO 		170		171		2	AN	Agency low grade offered. If grade span data were not reported, this field was calculated from the low grade spans of the associated schools in the CCD school universe file.
+								PK = Prekindergarten
+								KG = Kindergarten
+								01-12 = 1st through 12th grades
+								UG = Ungraded (UG occurs only in isolation from other GSLO codes)
+								00 = no students reported (00 occurs only in isolation from other GSLO codes).
+GSHI 		172		173		2	AN	Agency high grade offered. If grade span data were not reported, this field was calculated from the high grade spans of the associated schools in the CCD school universe file. 
+								PK = Prekindergarten
+								KG = Kindergarten
+								01-12 = 1st through 12th grades
+								UG = Ungraded (UG occurs only in isolation from other GSLO codes)
+								00 = no students reported (00 occurs only in isolation from other GSLO codes).
+MEMBER          174		181		8	N	Calculated total student membership of the local education agency.
+TOTD912         182		189		8	N	Count of dropouts (Grades 9-12).
+DRP912		190             197		8	N	Dropout rate (Grades 9-12).
+EBS912 		198		205		8	N	Enrollment base (Grades 9-12) aggregated from the school universe file (see appendix D for computation procedures).
+TOTDPL		206             213		8	N	Regular diploma count.
+AFGR            214		221		8	N	Averaged Freshmen Graduation rate (AFGR).
+AFGEB           222             229		8	N	Enrollment base AFGR.
+TOTOHC          230             237		8	N	Other high school completer count.
+
+

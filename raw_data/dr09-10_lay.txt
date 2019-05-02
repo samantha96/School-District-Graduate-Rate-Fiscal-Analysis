@@ -1,0 +1,58 @@
+NCES Common Core of Data Local Education Agency Universe Survey Dropout and Completion 
+Public-Use Data File: School Year 2009–10
+
+Number of Variables = 10
+Number of Observations = 18,439
+
+The file contains data for school year 2009–10 sorted by the local education agency 
+identification number (LEAID). “AN” and “N” indicate alphanumeric and numeric data, 
+respectively. Data presented in this release are available in two formats—SAS datasets 
+(.sas7bdat) and tab-separated values text files (.txt). An asterisk (*) in the order column 
+indicates that the field has one explicit decimal place.
+
+Variable              Data           
+name       Order      type     Description
+
+SURVYEAR     1        AN       School year
+FIPST        2        AN       Two Digit American National Standards Institute (ANSI) State Code.
+
+                             	01  =  Alabama        02  =  Alaska          04  =  Arizona
+                             	05  =  Arkansas       06  =  California      08  =  Colorado
+                             	09  =  Connecticut    10  =  Delaware        11  =  District of Columbia
+                             	12  =  Florida        13  =  Georgia         15  =  Hawaii
+                             	16  =  Idaho          17  =  Illinois        18  =  Indiana
+                             	19  =  Iowa           20  =  Kansas          21  =  Kentucky
+                             	22  =  Louisiana      23  =  Maine           24  =  Maryland
+                             	25  =  Massachusetts  26  =  Michigan        27  =  Minnesota
+                             	28  =  Mississippi    29  =  Missouri        30  =  Montana
+                             	31  =  Nebraska       32  =  Nevada          33  =  New Hampshire
+                             	34  =  New Jersey     35  =  New Mexico      36  =  New York
+                             	37  =  North Carolina 38  =  North Dakota    39  =  Ohio
+                             	40  =  Oklahoma       41  =  Oregon          42  =  Pennsylvania
+                             	44  =  Rhode Island   45  =  South Carolina  46  =  South Dakota
+                             	47  =  Tennessee      48  =  Texas           49  =  Utah
+                             	50  =  Vermont        51  =  Virginia        53  =  Washington
+                             	54  =  West Virginia  55  =  Wisconsin       56  =  Wyoming
+                             	58  =  DOD Dependents Schools-Overseas    
+                             	59  =  Bureau of Indian Education
+                             	60  =  American Samoa 61  =  DOD Dependents School-Domestic
+                             	66  =  Guam           69  =  Northern Marianas
+                             	72  =  Puerto Rico    78  =  Virgin Islands
+
+LEAID        3        AN       NCES Assigned Local Education Agency Identification Number
+TOTD912      4        N        Total Dropouts, Grades 9–12
+EBS912       5        N        Dropout Enrollment Base, Grades 9–12
+DRP912       6*       N        Dropout Rate, Grades 9–12
+TOTDPL       7        N        Total Diploma Count
+AFGEB        8        N        Total Averaged Freshman Graduation Rate (AFGR) Enrollment Base
+AFGR         9*       N        Total Averaged Freshmen Graduation Rate (AFGR)
+TOTOHC      10        N        Total Other High School Completion Certificate (OHC) Recipients
+
+
+
+
+
+
+
+
+

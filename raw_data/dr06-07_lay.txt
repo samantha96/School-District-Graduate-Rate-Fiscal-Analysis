@@ -1,0 +1,37 @@
+NCES Common Core of Data Local Education Agency Universe Survey Dropout and Completion 
+Public-Use Data File: School Year 2006–07
+
+Number of Variables = 10
+Number of Observations = 18,250
+
+The file contains data for school year 2006–07 sorted by the local education agency 
+identification number (LEAID). “AN” and “N” indicate alphanumeric and numeric data, 
+respectively. Data presented in this release are available in two formats—SAS datasets 
+(.sas7bdat) and tab-separated values text files (.txt). An asterisk (*) in the order column 
+indicates that the field has one explicit decimal place.
+
+Variable              Data           
+name       Order      type     Description
+
+SURVYEAR     1        AN       School year.
+FIPST        2        AN       Federal Information Processing Standards (FIPS) state code.
+LEAID        3        AN       NCES local education agency identification number. The 
+                                first two positions of this field are also the FIPS state 
+                                 code.
+TOTD912      4         N       Count of dropouts (Grades 9–12).
+EBS912       5         N       Enrollment Base (Grades 9–12).
+DRP912       6*        N       Dropout Rate (Grades 9–12).
+TOTDPL       7         N       Regular diploma count.
+AFGEB        8         N       Enrollment base Averaged Freshman Graduation Rate (AFGR).
+AFGR         9*        N       Average Freshmen Graduation Rate (AFGR).
+TOTOHC      10         N       Total Other High School Completers
+
+
+
+
+
+
+
+
+
+
