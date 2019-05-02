@@ -1,57 +1,113 @@
-# IST718 Project
+### Where should the money go? 
+### An analysis of school district fiscal data and student dropout rate
+Chun Xie, Xuehan Chen, Yimin Xiao, Yue Wang
 
-### The following below is so important and you could not want to miss.
+#### First part: project description
 
-**How to run these code and models on `notebook.acuna.io`?
+1.  Area: Education finance
+    
+2.  Problem: There is a persisting inequality of school funding in the United States (NCES) and the student dropout is also a crucial issue. There has been analysis on whether education finance can affect student achievement (Neymotin, 2010) and cause resource disparity in different races (NBC), but few studies tried to look at how it affects students’ continuity in education.
+    
+3.  Importance: Understanding the influence of fiscal factors on student dropout rate can help make better government funding decisions and school district budget plans to support students’ continuity in education and increase policy efficiency.
+    
+4.  Objective: Predict school district’s dropout level based on its fiscal information.
+    
+5.  Expected result: A 4-year prediction model of grade 9-12 dropout level in U.S. school districts based on its fiscal data. A classification model of whether a school district will have a high or low dropout rate based on its fiscal data.
+    
+6.  Relevance: The result can be used to help school district take precautions in budgeting if dropout rate is estimated high. It can also help government to make better fiscal policy to support school districts facing student dropout problems.
+    
 
-Because there are too many files, you need 
+#### Second part: more details about the goals of the project
 
-- First, zip/compress "IST718_project" folder to "IST718_project.zip"
-- Second, upload the zip file to notebook.acuna.io, and wait
-- Third, find the file "unzip_file.ipynb" in "IST718_project" folder and upload it to notebook.acuna.io, as well
-- Fourth, keep this two file you upload in same directory.
-- Fifth, run "unzip_file.ipynb" on notebook.acuna.io, and wait
-- Sixth, you already have these awesome code and models online, enjoy.
+ 1. Data preparation 
+	
+	Tasks:
 
-This notebook contains 6 parts.
+	-   Find school-district-level fiscal and dropout data
+    
+	-   Understand the data content and perform a preliminary data exploration
+    
+	-   Clean the data and join data from different sources so that it is ready for analysis
+    
+    Expected results:
+	-  A cleaned data set with fiscal data as input values and a certain measurement of dropout level as the output value 
+	
+	Expected problems:
 
-- A little cleaning.
-- Change some columns to percentage, split data to training, validation, test.
-- Create dummy variable
-- Logistic Regression, Random Forest, Gradient Boosted Trees.
-- Inference
-- Cluster
+	-   How to deal with missing values and outliers
+    
+	-   How to deal with special labels used in the source data
+    
+	-   How to join data gathered from different sources
+    
 
-** Because we use grid search to tune our models, **it will need too much time to fitting these 3 models.** You may get stuck into this long time fitting. You could try Logistic Regression, which is relative faster.
+ 2. Model building, cross-validating, and testing 
+	
+	Tasks:
 
-So we have saved all the models we already fitted, and the same for all best models. They are saved in `models` directory.
+	- Separating the data into training, validating, and testing part
+    
+	-   Data modeling, cross validation and model selection, model testing 
+	
+	Expected results:
+    
 
-In the fitting process in this code, the models are saved in `temp/models` directory, just for playing. You can also loaded the models we already fitted from `models/lr`, `models/rf`, `models/gbt`, if you want to check all the accuracies.
+	-   Different models for prediction and classifying
+    
+	-   Choosing the most optimal model based on validation performance
+    
+	-   Testing result of the model chosen
+    
+    Expected problems
+    
+	-   Noise in the data: can the models capture the relationship
+    
+	-   Trade-off between accuracy interpretability: can we get a model that can give an accurate estimation of the relationship and also can be inferenced?
+    
+	-   Feature selection: Too many features in fiscal data, and some are intercorrelated
+    
 
-In the evaluate process, the models are loaded from `models/best_models`, which could save you much time.
+ 3. Inference and prediction 
+	
+	Tasks:
 
-** So, you may skip the fitting process, directly run the evaluate process for different model types.
+	-   Understanding the relationship between fiscal factors and student dropout rate
+    
+	-   Interpreting models or analysis result in the context of education and fiscal policy making and making actionable suggestions 
+	
+	Expected results:
+    
+	-   Explanation on how school district revenue and expenditure affect dropout rate
+    
+	-   Suggestion for government on what types of districts to give more funding
+    
+	-   Suggestion for school districts on where to spend the money
+    
+    Expected problems:
+    
+	-   Difficulty to extract actionable suggestions from the analysis result
+    
+	-   Lack of domain expertise, an understanding of education and finance for public institutions
+    
+   #### Third part: data set, tools, models, model selection
+ 
+1. Data set: We have two types of dataset. One is for fiscal data, and the other one is for dropout data. They can be joined by “LEAID”, a local education agency id, which is a unique number given by national center for education statistics. The fiscal dataset has more than 80,000 observations and 256 variables, categorized by district basic information, different types of revenue, different types of expenditures, salaries, textbooks, etc. The drop out dataset has 10 variables, which is mainly about drop out information. The data is retrieved from the National Center for Education Statistics Website (https://nces.ed.gov/).
+    
+2.  Tools: Spark MLlib
+    
+3.  Models: Linear regression, logistic regression, svm, random forests
+    
+4.  Criteria for model selection: Cross-validation, mse, confusion matrix, precision, recall, f score
+    
 
-It's like:
+#### References:
 
-> lr_best_model = PipelineModel.load("models/best_models/lr_best_model")
+1. NBC News. 2018. ‘Segregation, school funding inequalities still punishing Black, Latino students’, NBC, Retrieved online on 02/19/2019 via https://www.nbcnews.com/news/latino/segregation-school-funding-inequalities-still-punishing-black-latino-students-n837186.
 
-> evaluator.evaluate(lr_best_model.transform(testing_df))
+2. Neymotin, F. 2010. ‘The relationship between school funding and student achievement in Kansas public school’. Journal of Education Finance: 36-1, pp. 88-108. Retrieved online on 02/19/2019 via https://www.jstor.org/stable/40704407.
 
-** Because it loads models we already trained, **the performance may have some difference.**
+3. NCES (National Center for Education Statistics). ‘Education equity in the States’.Inequalities in public school district revenues, Chapter IV. Retrieved online on 02/19/2019 via https://nces.ed.gov/pubs98/inequalities/chapter4.asp
 
-The Inference and cluster process is fast, it is suggested to run it.
-
-### Explanation for `temp` directory.
-
-It is like a playground.
-
-No need to worry the important data and models used in other notebook will be re-write, appended, or changed by some running error.
-
-- The **raw data** are saved in `raw_data` directory.
-
-- The **cleaned data** are saved in `data` directory, which will be used by other .ipynb files.
-
-- The **fitted models** are saved in `models` directory.
-
-- The **dataset and models created in this notebook** are saved in `temp/data` directory. Because we assumed you run this code only for checking the code, It is a temp directory, saving temporary data and models.
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbNTU3MjkzMDIyXX0=
+-->
