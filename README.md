@@ -1,4 +1,5 @@
-### Where should the money go? 
+### School District Graduate Rate Fiscal Analysis
+#### Where should the money go? 
 ### An analysis of school district fiscal data and student dropout rate
 Chun Xie, Xuehan Chen, Yimin Xiao, Yue Wang
 
