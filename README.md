@@ -99,7 +99,10 @@ Chun Xie, Xuehan Chen, Yimin Xiao, Yue Wang
     
 4.  Criteria for model selection: Cross-validation, mse, confusion matrix, precision, recall, f score
     
+#### Summary
 
+Our analysis has producded three classification models with test AUC of 0.757,0.801, and 0.800 respectively, which means our models performed well in predicting and classifing the graduation rate(greater than 83.8 means High graduation rate, less than 83.8 means Low graduation rate) based on the fiscal situation of the school district.
+  
 #### References:
 
 1. NBC News. 2018. ‘Segregation, school funding inequalities still punishing Black, Latino students’, NBC, Retrieved online on 02/19/2019 via https://www.nbcnews.com/news/latino/segregation-school-funding-inequalities-still-punishing-black-latino-students-n837186.
